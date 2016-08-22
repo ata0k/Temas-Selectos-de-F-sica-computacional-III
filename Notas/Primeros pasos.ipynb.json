@@ -1,0 +1,233 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Qué aprenderán en el curso?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "1. Aprenderán a hacer una investigación en física computacional. \n",
+    "2. Aprenderán a escribir un artículo de investigación. \n",
+    "3. Aprenderán técnicas de simulación de cómputo para la físca estadística y la dinámica no lineal. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Qué se hará en el curso?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Se trata de realizar un proyecto hasta sus últimas consecuencias. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Hay algún temario? "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Sí exite. Lo que propuse como temario es: \n",
+    "\n",
+    "1. Introducción: Herramientas Computacionales         \n",
+    "    - Software de visualización (Graficas 2D y 3D)\n",
+    "    - Programas de cálculo matemático simbólico\n",
+    "    - Programación de alto nivel \n",
+    "    - Programación de Scripts \n",
+    "\n",
+    "2. Billares\n",
+    "    - Ecuaciones de movimiento\n",
+    "    - Sistemas dispersivos y semidispersivos\n",
+    "    - Billares abiertos y cerrados  \n",
+    "    - Caos cuántico\n",
+    "    - Modelos de difusión de calor y masa\n",
+    "\n",
+    "3. Dinámica Browniana\n",
+    "    - Nociones básicas de probabilidad\n",
+    "    - Movimiento Browniano\n",
+    "    - Ecuaciones diferenciales estocásticas\n",
+    "    - Simulaciones con Dinámica Browniana\n",
+    "    - Coloides y polímeros\n",
+    "\n",
+    "4. Fractales y Caos\n",
+    "    - Iteraciones y retroalimentación \n",
+    "    - Leyes de potencia y la dimensión fractal \n",
+    "    - Compresión de imágenes y teorema del collage\n",
+    "    - Aleatoriedad en la construcción de fractales \n",
+    "    - Percolación\n",
+    "    - Movimiento Browniano y leyes de escalamiento\n",
+    "    - Caos determinístico: sensitividad, mezclado y puntos periódicos"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Aunque mi intención no es que veamos cada punto del temario, son sólo los temas posibles a investigarse. Dependiendo de que proyecto elijan, aprenderán sobre alguno de los temas. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Proyectos:"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "1. Modelo de tráfico con \"cafres\"\n",
+    "2. Problema matemático del gusano\n",
+    "3. Problema de \"perdido en el bosque\"\n",
+    "4. Modelo de Ising (materiales de alto spin)\n",
+    "5. Modelo de gas de Lorentz en altas dimensiones (billar en N-dimensiones)\n",
+    "6. Modelo de materiales magnetoresistentes\n",
+    "7. Modelos de transición de fase (percolación)\n",
+    "- Sistema coloidal\n",
+    "- Modelos de transferencia de calor\n",
+    "8. Cálculo de la dimensión fractal en plantas y colonias de hongos o virus\n",
+    "9. Modelos de quasicristales\n",
+    "10. Problema de 2 discos en una caja\n",
+    "11. y otros muchos más si ninguno de estos los convence..."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Primer problema: Calcular el área de un polígono convexo, del que nos dan las coordenadas. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "using PyPlot\n",
+    "using PyCall\n",
+    "@pyimport matplotlib.animation as anim  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "#Voy a crear una matriz grandota donde la primer entrada es el tiempo, ustede háganlo más eficiente sin usar tanta memoria\n",
+    "Lx=100 #Posiciones en x\n",
+    "Ly=100 #Posiciones en y\n",
+    "N=100 #Tiempos\n",
+    "P=zeros(N,Lx,Ly)\n",
+    "P[1,Lx/2,Ly/2]=1 #Empezamos en la casilla (1,1)\n",
+    "\n",
+    "for i in 2:N #Loop tiempo\n",
+    "    for j in 1:Lx #Loop en x\n",
+    "        for k in 1:Ly #Loop en y\n",
+    "            if j==1\n",
+    "                if k==1\n",
+    "                    P[i,j,k]=1/4*(P[i-1,j+1,k]+P[i-1,j,k+1])\n",
+    "                elseif k==Ly\n",
+    "                    P[i,j,k]=1/4*(P[i-1,j,k-1]+P[i-1,j+1,k])\n",
+    "                else\n",
+    "                    P[i,j,k]=1/4*(P[i-1,j,k-1]+P[i-1,j+1,k]+P[i-1,j,k+1])\n",
+    "                end\n",
+    "            elseif j==Lx\n",
+    "                if k==1\n",
+    "                    P[i,j,k]=1/4*(P[i-1,j-1,k]+P[i-1,j,k+1])\n",
+    "                elseif k==Ly\n",
+    "                    P[i,j,k]=1/4*(P[i-1,j,k-1]+P[i-1,j-1,k])\n",
+    "                else\n",
+    "                    P[i,j,k]=1/4*(P[i-1,j,k-1]+P[i-1,j-1,k]+P[i-1,j,k+1])\n",
+    "                end\n",
+    "            else\n",
+    "                if k==1\n",
+    "                    P[i,j,k]=1/4*(P[i-1,j-1,k]+P[i-1,j+1,k]+P[i-1,j,k+1])\n",
+    "                elseif k==Ly\n",
+    "                    P[i,j,k]=1/4*(P[i-1,j-1,k]+P[i-1,j,k-1]+P[i-1,j+1,k])\n",
+    "                else\n",
+    "                    P[i,j,k]=1/4*(P[i-1,j-1,k]+P[i-1,j,k-1]+P[i-1,j+1,k]+P[i-1,j,k+1])\n",
+    "                end\n",
+    "            end\n",
+    "        end\n",
+    "    end\n",
+    "end          "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "#Crear un arreglo de la matriz en cada tiempo\n",
+    "ani=Any[]\n",
+    "for k in 1:100\n",
+    "    push!(ani,squeeze(P[k,:,:],1))\n",
+    "end"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "fig=figure() #creamos una figura\n",
+    "ims = [[imshow(ani[i])] for i=1:100] #metemos en un arreglo cada colormap en cada tiempo\n",
+    "#Lo que sigue\n",
+    "ani = anim.ArtistAnimation(fig, ims, interval=500, blit=true) \n",
+    "ani[:save](\"caminante2D.mp4\", extra_args=[\"-vcodec\", \"libx264\", \"-pix_fmt\", \"yuv420p\"])\n",
+    "display(\"text/html\", string(\"\"\"<video autoplay controls><source src=\"data:video/x-m4v;base64,\"\"\",base64(open(readbytes,\"caminante2D.mp4\")),\"\"\"\" type=\"video/mp4\"></video>\"\"\"))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Julia 0.4.6",
+   "language": "julia",
+   "name": "julia-0.4"
+  },
+  "language_info": {
+   "file_extension": ".jl",
+   "mimetype": "application/julia",
+   "name": "julia",
+   "version": "0.4.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 0
+}
