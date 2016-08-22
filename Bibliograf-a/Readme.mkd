@@ -1,3 +1,5 @@
+Lista de títulos a buscarse en Google Académico:
+
 1. The worm problem of Leo Moser.
 - Brownian dynamics with hydrodynamic interactions.
 - Polymer simulations companion:an introduction to brownian dynamics
@@ -5,3 +7,4 @@
 - Diffusion in the lorentz gas
 
 ...
+La lista crecerá durante el curso. 
