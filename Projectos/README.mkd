@@ -1,0 +1,17 @@
+Los proyectos elegidos hasta el momendo son: 
+
+1. Trafico con "Cafres".
+- Propagación de infecciones en Animales. 
+- Perdido en el bosque. 
+- Modelo de Ising de un sólido de spin alto. 
+- Gas de Lorentz N-dimensional.
+- Magnetoresistencia en cuasicristales. 
+- Tranmisión de calor (Modelo de Gilbert)
+- Problema del gusano.  
+
+Aún están libres los siguientes proyectos: 
+
+1. Modelo de billares cilíndricos y discos en una caja. 
+- Modelo de coloides con Dinámica Browniana.
+- Modelo de tráfico-percolación.
+- Función de densidad de una proyección de puntos de un cristal N-dimensional en un espacio 2D. 
