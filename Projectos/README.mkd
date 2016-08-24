@@ -16,6 +16,6 @@ Aún están libres los siguientes proyectos:
 - Modelo de tráfico-percolación.
 - Función de densidad de una proyección de puntos de un cristal N-dimensional en un espacio 2D. 
  
-** Los que aún no han elegido proyecto, es importante que elijan pronto su proyecto **
+**Los que aún no han elegido proyecto, es importante que elijan pronto su proyecto**
 
 Si tienen dudas, escríbanme. 
