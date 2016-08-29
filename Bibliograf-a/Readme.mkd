@@ -1,10 +1,35 @@
 Lista de títulos a buscarse en Google Académico:
 
-1. The worm problem of Leo Moser.
-- Brownian dynamics with hydrodynamic interactions.
-- Polymer simulations companion:an introduction to brownian dynamics
-- Magnetotransport of sinai billiard
-- Diffusion in the lorentz gas
+El problema del gusano : 
 
+1. The worm problem of Leo Moser.
+
+Problema de tráfico: 
+
+- Steady state traffic flow, entropy production rate,
+temporal fluctuations and fuel consumption
+-"Minimal Traffic Model with Safe Driving Conditions"
+
+Billares tipo gas de Lorentz: 
+
+- Diffusion in the lorentz gas
+- Embedding quasicrystals in a periodic cell: dynamics in quasiperiodic structures
+
+Magnetoresistencia: 
+
+- Magnetotransport of sinai billiard 
+
+Simulaciones en dinámica Browniana : 
+
+- Polymer simulations companion:an introduction to brownian dynamics
+- Brownian dynamics with hydrodynamic interactions.
+
+Problema de transmición de enfermedades: 
+
+-Encounter times in overlapping domains: application to epidemic spread in a population of territorial animals
+
+Problema de "perdido en el bosque": 
+
+- http://www.jstor.org/stable/4145038?seq=1#page_scan_tab_contents
 ...
 La lista crecerá durante el curso. 
