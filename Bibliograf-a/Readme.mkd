@@ -6,31 +6,31 @@ El problema del gusano :
 
 Problema de tráfico: 
 
-- Steady state traffic flow, entropy production rate,
+1. Steady state traffic flow, entropy production rate,
 temporal fluctuations and fuel consumption
 -"Minimal Traffic Model with Safe Driving Conditions"
 
 Billares tipo gas de Lorentz: 
 
-- Diffusion in the lorentz gas
+1. Diffusion in the lorentz gas
 - Embedding quasicrystals in a periodic cell: dynamics in quasiperiodic structures
 
 Magnetoresistencia: 
 
-- Magnetotransport of sinai billiard 
+1. Magnetotransport of sinai billiard 
 
 Simulaciones en dinámica Browniana : 
 
-- Polymer simulations companion:an introduction to brownian dynamics
+1. Polymer simulations companion:an introduction to brownian dynamics
 - Brownian dynamics with hydrodynamic interactions.
 
 Problema de transmición de enfermedades: 
 
--Encounter times in overlapping domains: application to epidemic spread in a population of territorial animals
+1. Encounter times in overlapping domains: application to epidemic spread in a population of territorial animals
 
 Problema de "perdido en el bosque": 
 
-- http://www.jstor.org/stable/4145038?seq=1#page_scan_tab_contents
+1. http://www.jstor.org/stable/4145038?seq=1#page_scan_tab_contents
 - https://arxiv.org/pdf/math/0501123v2.pdf
 ...
 La lista crecerá durante el curso. 
