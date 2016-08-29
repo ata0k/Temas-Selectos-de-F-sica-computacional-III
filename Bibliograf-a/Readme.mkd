@@ -32,5 +32,9 @@ Problema de "perdido en el bosque":
 
 1. http://www.jstor.org/stable/4145038?seq=1#page_scan_tab_contents
 - https://arxiv.org/pdf/math/0501123v2.pdf
-...
+
+Conducción de calor: 
+
+1.- Heat Conduction and Fourier’s Law by Consecutive Local Mixing and Thermalization
+
 La lista crecerá durante el curso. 
