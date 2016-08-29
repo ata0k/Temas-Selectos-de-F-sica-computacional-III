@@ -31,5 +31,6 @@ Problema de transmición de enfermedades:
 Problema de "perdido en el bosque": 
 
 - http://www.jstor.org/stable/4145038?seq=1#page_scan_tab_contents
+- https://arxiv.org/pdf/math/0501123v2.pdf
 ...
 La lista crecerá durante el curso. 
