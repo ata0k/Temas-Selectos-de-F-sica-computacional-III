@@ -8,7 +8,8 @@ Problema de tráfico:
 
 1. Steady state traffic flow, entropy production rate,
 temporal fluctuations and fuel consumption
--"Minimal Traffic Model with Safe Driving Conditions"
+- "Minimal Traffic Model with Safe Driving Conditions"
+- Un video que vale la pena ver: https://www.youtube.com/watch?v=iHzzSao6ypE
 
 Billares tipo gas de Lorentz: 
 
